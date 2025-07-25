@@ -10,4 +10,4 @@ targets:
     default: true
     workspace:
       host: https://dbc-940225c4-9324.cloud.databricks.com/
-      root_path: /Users/${workspace.current_user.username}/deployment/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Users/saravanan.289@gmail.com/deployment/.bundle/${bundle.name}/${bundle.target}
