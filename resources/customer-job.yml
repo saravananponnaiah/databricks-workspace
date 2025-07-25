@@ -1,0 +1,18 @@
+resources:
+  jobs:
+    customer_job:
+      name: customer-job
+      tasks:
+        - task_key: workbook_01_task
+          notebook_task:
+            notebook_path: /Workspace/Users/saravanan.289@gmail.com/databricks-workspace/src/notebooks/workbook_01
+            source: WORKSPACE
+        - task_key: workbook_02_task
+          depends_on:
+            - task_key: workbook_01_task
+          notebook_task:
+            notebook_path: /Workspace/Users/saravanan.289@gmail.com/databricks-workspace/src/notebooks/workbook_02
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: STANDARD
