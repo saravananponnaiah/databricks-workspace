@@ -6,7 +6,7 @@ include:
 
 targets:
   development:
-    mode: dev
+    mode: development
     default: true
     workspace:
       host: https://dbc-940225c4-9324.cloud.databricks.com/
