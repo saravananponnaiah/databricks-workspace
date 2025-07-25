@@ -1,4 +1,6 @@
-name: Python application deployment
+name: "Python application deployment"
+
+concurrency: 1
 
 on:
   push:
@@ -16,11 +18,13 @@ jobs:
 
     steps:
       - name: Checkout Code
-      - uses: actions/checkout@v4
-      - uses: databricks/setup-cli@main
+        uses: actions/checkout@v4
+
+      - name: Databricks setup CLI
+        uses: databricks/setup-cli@main
       
       - name: Deploy Databricks bundle
-      - run: databricks bundle deploy
+        run: databricks bundle deploy
         working-directory: .
         env:
           DATABRICKS_TOKEN: ${{secrets.DATABRICKS_TOKEN}}
